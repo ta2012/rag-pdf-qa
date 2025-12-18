@@ -29,7 +29,7 @@ def answer_question(document_id: str, question: str, top_k: int = 5) -> Tuple[st
     if not context_chunks:
         answer = "I could not find relevant information in the document for this question."
     else:
-        # Simple extractive style: return concatenated top chunks
+    
         answer = (
             "Here are the most relevant parts from the document:\n\n"
             + "\n\n---\n\n".join(context_chunks)

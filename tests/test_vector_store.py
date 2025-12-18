@@ -7,7 +7,7 @@ def test_add_and_has_document(tmp_path: Path):
 
     document_id = "doc-1"
     chunks = ["first chunk text", "second chunk text"]
-    # Fake embeddings: 2 vectors of 384-dim
+    
     embeddings = np.random.rand(2, 384)
 
     store.add_document(document_id, embeddings, chunks)
@@ -23,7 +23,7 @@ def test_similarity_search(tmp_path: Path):
 
     store.add_document(document_id, embeddings, chunks)
 
-    query_embedding = embeddings[0]  # ideally should match first chunk
+    query_embedding = embeddings[0]  
     results = store.similarity_search(
         document_id=document_id,
         query_embedding=query_embedding,
