@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual env
+.venv/
+venv/
+
+# Editor
+.vscode/
+
+# Data (PDF uploads + Chroma DB)
+data/uploads/
+data/chroma/
