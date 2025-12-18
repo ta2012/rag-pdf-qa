@@ -48,3 +48,4 @@ rag-pdf-qa/
 
 - Plug an LLM into `app/rag/pipeline.py` for generated answers.  
 - Add a small frontend (React/Next/Streamlit) on top of this API.
+
