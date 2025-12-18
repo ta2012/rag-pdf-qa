@@ -16,20 +16,14 @@ Retrieval-Augmented Generation backend for question-answering over your own PDFs
 
 ##  Structure
 
-rag-pdf-qa/
-├── app/
-│ ├── api/ # ingest, query endpoints
-│ ├── core/ # config, logging
-│ ├── models/ # Pydantic schemas
-│ ├── services/ # pdf → text → chunks → embeddings → Chroma
-│ ├── rag/ # RAG pipeline + prompt
-│ └── main.py # FastAPI app
-├── data/
-│ ├── uploads/ # raw PDFs (gitignored)
-│ └── chroma/ # Chroma index (gitignored)
-├── tests/
-├── requirements.txt
-└── README.md
+## Structure
+
+- `app/` – API, config, models, services, RAG pipeline, main app
+- `data/uploads/` – uploaded PDFs (ignored)
+- `data/chroma/` – ChromaDB index (ignored)
+- `tests/` – unit tests
+- `requirements.txt`
+- `README.md`
 
 ##  RAG Flow
 
@@ -48,4 +42,5 @@ rag-pdf-qa/
 
 - Plug an LLM into `app/rag/pipeline.py` for generated answers.  
 - Add a small frontend (React/Next/Streamlit) on top of this API.
+
 
